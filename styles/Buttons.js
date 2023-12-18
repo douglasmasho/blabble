@@ -23,7 +23,8 @@ const Buttons = StyleSheet.create({
     buttonText: {
         color: "white",
         fontSize: 18,
-        fontWeight: "600"
+        fontWeight: "600",
+        fontFamily: "MMedium"
     },
 
     background: {
@@ -36,6 +37,10 @@ const Buttons = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
       },
+
+      black: {
+        backgroundColor: "black"
+      }
 });
 
 export default Buttons;

@@ -30,6 +30,7 @@ const InputStyles = StyleSheet.create({
         width: "90%",
         height: "100%",
         paddingHorizontal: 15,
+        fontFamily: "MRegular"
     }
 });
 

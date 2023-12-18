@@ -9,6 +9,9 @@ const Utilities  = StyleSheet.create({
     },
     marginBottomBig: {
         marginBottom: 30
+    },
+    margin: {
+        margin: 10
     }
 })
 
