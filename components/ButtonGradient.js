@@ -3,10 +3,10 @@ import {Buttons} from "../styles/styles";
 import { LinearGradient } from 'expo-linear-gradient';
 import Colors from "../styles/Colors";
 
-const Button = ({color, Icon, handlePress, text}) => {
+const Button = ({color, Icon, handlePress, text, onPress}) => {
 
     return (
-        <TouchableOpacity handlePress={handlePress} style={Buttons.buttonFullWidth}>
+        <TouchableOpacity handlePress={handlePress} style={Buttons.buttonFullWidth} onPress={onPress}>
             <LinearGradient
         // Button Linear Gradient
         colors={[Colors.blue, Colors.darkBlue]}

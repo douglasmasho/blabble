@@ -1,7 +1,7 @@
 import {SafeAreaView, TextareaHTMLAttributes, View, Text, Image, ScrollView} from 'react-native'
 import {PageStyles, LoginPage, Typography, Utilities} from '../styles/styles';
 
-import { Stack, Link } from 'expo-router';
+import { Stack, Link, router } from 'expo-router';
 import logo from "../assets/img/logo.png";
 import Input from '../components/Input';
 import { SimpleLineIcons, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'; 
@@ -17,6 +17,10 @@ const Login = () => {
     const LoginIcon = <AntDesign name="login" size={24} color={Colors.white} style={Utilities.margin}/>;
     const Google = <MaterialCommunityIcons name="google" size={24} color={Colors.white} style={Utilities.margin}/>
     const User = <AntDesign name="user" size={24} color={Colors.blue} style={Utilities.margin} />
+
+    const signupFunc = ()=>{
+        router.replace("(tabs)/Home");
+    }
     return (
         <ScrollView>
 
@@ -37,7 +41,7 @@ const Login = () => {
             <Input Icon={Lock} placeholder={"Password"} secureEntry={true}/>
             <Input Icon={Lock} placeholder={"Confirm Password"} secureEntry={true}/>
             <View style={Utilities.marginBottomBig}>
-            <Button text="Sign Up" Icon={LoginIcon}/>
+            <Button text="Sign Up" Icon={LoginIcon} onPress={signupFunc}/>
             </View>
             <Text style={[Typography.centerText, Typography.boldText, Typography.biggerText, Utilities.marginBottomBig]}>OR</Text>
             <View style={Utilities.marginBottom}>
